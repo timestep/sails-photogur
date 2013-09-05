@@ -13,7 +13,18 @@ module.exports = {
   	/* e.g.
   	nickname: 'string'
   	*/
-    
+  	title: {
+		type: 'STRING'
+	},
+
+	artist: {
+		type: 'STRING'
+	},
+
+	url: {
+		type: 'STRING'
+	},
+
   }
 
 };
