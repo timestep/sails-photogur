@@ -36,7 +36,8 @@ module.exports.routes = {
     view: 'home/index'
   },
 
-  'get /pictures': 'PictureController.index'
+  'get /pictures':'PicturesController.index'
+
 
   /*
   // But what if you want your home page to display
