@@ -36,7 +36,7 @@ module.exports.routes = {
     view: 'home/index'
   },
 
-  '/pictures':'PicturesController'
+  //'/picture':'PictureController'
 
 
   /*

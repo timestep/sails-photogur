@@ -12,64 +12,14 @@ module.exports = {
     res.send('hello world!');
   }
   */
-  
-  /**
-   * /picture/index
-   */ 
-  index: function (req,res) {
+	index: function(req,res){
+		Picture.findAll(function(err,pic){
+			if(err) return res.send(err,500);
 
-    // This will render the view: 
-    // /Users/kevin/Documents/workspace/sails-photogur/views/Picture/index.ejs
-    res.view();
-
-  },
-
-
-  /**
-   * /picture/show
-   */ 
-  show: function (req,res) {
-
-    // This will render the view: 
-    // /Users/kevin/Documents/workspace/sails-photogur/views/Picture/show.ejs
-    res.view();
-
-  },
-
-
-  /**
-   * /picture/create
-   */ 
-  create: function (req,res) {
-
-    // This will render the view: 
-    // /Users/kevin/Documents/workspace/sails-photogur/views/Picture/create.ejs
-    res.view();
-
-  },
-
-
-  /**
-   * /picture/edit
-   */ 
-  edit: function (req,res) {
-
-    // This will render the view: 
-    // /Users/kevin/Documents/workspace/sails-photogur/views/Picture/edit.ejs
-    res.view();
-
-  },
-
-
-  /**
-   * /picture/delete
-   */ 
-  delete: function (req,res) {
-
-    // This will render the view: 
-    // /Users/kevin/Documents/workspace/sails-photogur/views/Picture/delete.ejs
-    res.view();
-
-  }
-
+			res.view({
+				model: pic
+			});
+		 });
+	
+	}
 };
